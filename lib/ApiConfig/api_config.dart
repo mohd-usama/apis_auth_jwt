@@ -9,3 +9,16 @@ class ApiConfig{
   static const recipes = "/recipes?limit=";
 
 }
+
+
+
+// import 'package:flutter_flavor/flutter_flavor.dart';
+//
+// // Get baseUrl
+// final baseUrl = FlavorConfig.instance.variables["baseUrl"] as String;
+//
+// // Get flavor name
+// final flavorName = FlavorConfig.instance.name; // "DEV", "STAGING", ""
+//
+// // Check if production
+// final isProd = FlavorConfig.instance.name.isEmpty;

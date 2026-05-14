@@ -10,6 +10,7 @@ import 'package:apis_auth_jwt/SplashScreen/auth_bloc.dart';
 import 'package:apis_auth_jwt/SplashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_flavor/flutter_flavor.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,14 +31,16 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => AuthBloc(repository)),
         BlocProvider(create: (_) => HomeBloc(repository)),
       ],
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple), useMaterial3: true),
-        home: const SplashScreen(),
-        routes: {
-          '/home': (context) => const HomeScreen(),
-          '/login': (context) => const LoginScreen(),
-        },
+      child: FlavorBanner(
+        child: MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple), useMaterial3: true),
+          home: const SplashScreen(),
+          routes: {
+            '/home': (context) => const HomeScreen(),
+            '/login': (context) => const LoginScreen(),
+          },
+        ),
       ),
     );
   }

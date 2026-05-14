@@ -37,6 +37,8 @@ dependencies:
   flutter_bloc: ^9.1.1
   dio: ^5.9.2
   flutter_secure_storage: ^10.0.0
+  flutter_flavor: ^3.1.4
+
 
 dev_dependencies:
   flutter_test:
@@ -48,11 +50,25 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icons/letter-p.png"
+  flavors:
+    dev:
+      image_path: "assets/icons/letter-d.png"
+    stag:
+      image_path: "assets/icons/letter-s.png"
+    prod:
+      image_path: "assets/icons/letter-p.png"
+
 flutter:
 
   # The following line ensures that the Material Icons font is
@@ -61,9 +77,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/icons/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
